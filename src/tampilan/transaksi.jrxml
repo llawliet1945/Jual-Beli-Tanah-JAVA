@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="80160b05-c3bd-494d-b205-62bc3737e1b8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idtransaksi" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     transaksi.`idtransaksi` AS transaksi_idtransaksi,
+     transaksi.`username_admin` AS transaksi_username_admin,
+     transaksi.`nik_pembeli` AS transaksi_nik_pembeli,
+     transaksi.`nik_penjual` AS transaksi_nik_penjual,
+     transaksi.`noajb` AS transaksi_noajb,
+     transaksi.`luas_tanah` AS transaksi_luas_tanah,
+     transaksi.`njop` AS transaksi_njop,
+     transaksi.`tgltransaksi` AS transaksi_tgltransaksi,
+     transaksi.`harga_transaksi` AS transaksi_harga_transaksi,
+     transaksi.`harga_notaris` AS transaksi_harga_notaris,
+     transaksi.`harga_total` AS transaksi_harga_total
+FROM
+     `transaksi` transaksi
+where
+	transaksi.`idtransaksi`=$P{idtransaksi}]]>
+	</queryString>
+	<field name="transaksi_idtransaksi" class="java.lang.String"/>
+	<field name="transaksi_username_admin" class="java.lang.String"/>
+	<field name="transaksi_nik_pembeli" class="java.lang.String"/>
+	<field name="transaksi_nik_penjual" class="java.lang.String"/>
+	<field name="transaksi_noajb" class="java.lang.String"/>
+	<field name="transaksi_luas_tanah" class="java.lang.Integer"/>
+	<field name="transaksi_njop" class="java.lang.String"/>
+	<field name="transaksi_tgltransaksi" class="java.sql.Date"/>
+	<field name="transaksi_harga_transaksi" class="java.lang.Long"/>
+	<field name="transaksi_harga_notaris" class="java.lang.Long"/>
+	<field name="transaksi_harga_total" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ab4d18ef-ed0a-42b1-90f9-b07bcb6de865" x="206" y="0" width="122" height="33"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Nota Transaksi]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="5a1117ed-eec2-4be4-ba78-059c70a54728" x="0" y="0" width="59" height="20"/>
+				<textElement/>
+				<text><![CDATA[Id Transaksi:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="45087a39-a549-446b-a974-395317ef7be5" x="59" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_idtransaksi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="184c377e-3135-4141-9a6c-539358b62483" x="455" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_tgltransaksi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d3bc9bd0-1429-4cef-9201-72e583158af6" x="389" y="1" width="66" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tgl Transaksi:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<line>
+				<reportElement uuid="75792aef-d465-4248-9850-182a28c6fc83" x="0" y="0" width="555" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="fc542183-b7be-4b2c-b709-b0f8b536aba0" x="0" y="1" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[NIK Pembeli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="905271d0-d0f5-4918-8dde-314dc9b24989" x="106" y="1" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[NIK Penjual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="192c29f9-5c2f-4a59-a78a-d15ad5ed0f68" x="218" y="1" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[No Ajb]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4f519abe-8dd0-4e3e-8b21-91c8dedb36ea" x="294" y="1" width="57" height="20"/>
+				<textElement/>
+				<text><![CDATA[Luas Tanah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f7dc37e0-7b63-48a8-ab91-8eeebca33b57" x="371" y="1" width="54" height="20"/>
+				<textElement/>
+				<text><![CDATA[NJOP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8f1c08f4-0ba8-4eb4-b9cd-fbfb67dc757e" x="455" y="1" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Harga Transaksi]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement uuid="f1d7bc8c-4bd3-444e-a8b4-53f57aca6a74" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_nik_pembeli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9ac30306-f2d8-42c2-9a43-a896715ca0f8" x="106" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_nik_penjual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c12f3893-9f15-4540-a44e-35ee30e84e00" x="218" y="0" width="58" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_noajb}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d472bd91-84aa-4ee1-89fe-34ea50a3e2c3" x="294" y="0" width="57" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_luas_tanah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="25339cb0-95b3-4988-99a3-535d073afea4" x="371" y="0" width="54" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_njop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ab83eb9f-a252-4a99-943c-dc84c2a3d3f7" x="455" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_harga_transaksi}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="8b1da7e0-a8f3-46f4-966d-fd044ea2ee63" x="0" y="0" width="555" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="9bfd4574-2a58-4f23-bcdc-e7b53a559bea" x="0" y="22" width="89" height="20"/>
+				<textElement/>
+				<text><![CDATA[Username Admin:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2d9bf509-8319-46f4-9d7e-9080a5ec8d83" x="89" y="22" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_username_admin}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="13d74d87-940d-428e-a892-8561177eb0d1" x="206" y="22" width="70" height="20"/>
+				<textElement/>
+				<text><![CDATA[Harga Notaris:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2ac6b727-b85f-4ed6-a1b1-9b6dc755e703" x="276" y="22" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_harga_notaris}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="318c1ea8-304f-463e-a488-8d3b97681132" x="389" y="22" width="66" height="20"/>
+				<textElement/>
+				<text><![CDATA[Harga Total:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="f294d230-e560-4320-9de4-0db69f48a7f7" x="455" y="22" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_harga_total}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="8b1da7e0-a8f3-46f4-966d-fd044ea2ee63" x="0" y="0" width="555" height="1"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>
