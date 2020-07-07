@@ -1,6 +1,6 @@
 package tampilan;
 /**
- * @author Vena Grasheela Septiana
+ * @author https://github.com/llawliet1945
  */
 import java.sql.*;
 import java.text.SimpleDateFormat;
