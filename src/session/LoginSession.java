@@ -1,7 +1,7 @@
 package session;
 
 /**
- * @author Vena Grasheela
+ * @author https://github.com/llawliet1945
  */
 public class LoginSession {
     private static String ven;
