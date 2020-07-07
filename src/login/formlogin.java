@@ -5,7 +5,7 @@ import javax.swing.*;
 import session.LoginSession;
 /**
  *
- * @author Vena Grasheela 
+ * @author https://github.com/llawliet1945
  */
 public class formlogin extends javax.swing.JFrame {
  Connection conn = new koneksi().getKoneksi();
