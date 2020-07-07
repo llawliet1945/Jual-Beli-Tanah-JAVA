@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import koneksi.koneksi;
 /*
- * @author Vena Grasheela Septiana
+ * @author https://github.com/llawliet1945
  */
 public class formabout extends javax.swing.JFrame {
 private Connection conn = new koneksi().getKoneksi();
