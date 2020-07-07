@@ -9,7 +9,7 @@ import tampilan.*;
 
 /**
  *
- * @author ASUS
+ * @author https://github.com/llawliet1945
  */
 public class formutama extends javax.swing.JFrame {
 
